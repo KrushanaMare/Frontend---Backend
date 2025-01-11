@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Welcome to the Web Application</h1>
+
+        <!-- Login Form -->
+        <div id="login-section" class="card p-4 my-4">
+            <h3>Login</h3>
+            <form id="login-form">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="admin-dashboard" class="d-none">
+            <h3>Admin Dashboard</h3>
+            <p>Welcome, Admin! Manage users and stores below:</p>
+            <button class="btn btn-secondary mb-3" onclick="logout()">Logout</button>
+
+            <div id="user-list" class="mb-4">
+                <h4>Users</h4>
+                <ul id="users" class="list-group"></ul>
+            </div>
+
+            <div id="store-list">
+                <h4>Stores</h4>
+                <ul id="stores" class="list-group"></ul>
+            </div>
+        </div>
+
+        <!-- User Dashboard -->
+        <div id="user-dashboard" class="d-none">
+            <h3>User Dashboard</h3>
+            <p>Welcome! View and rate stores below:</p>
+            <button class="btn btn-secondary mb-3" onclick="logout()">Logout</button>
+
+            <div id="store-list">
+                <h4>Stores</h4>
+                <ul id="stores-user" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
